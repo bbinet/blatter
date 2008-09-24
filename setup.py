@@ -12,7 +12,7 @@ setup_info = dict(
 
     packages=['blatter'],
 
-    scripts = ['scripts/blatter']
+    scripts = ['scripts/blatter'],
     entry_points = {
         'console_scripts': [ 'blatter=blatter:run_script' ] },
 
