@@ -1,0 +1,5 @@
+syntax: glob
+
+blatter.egg-info
+*.pyc
+junk
