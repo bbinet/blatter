@@ -148,6 +148,9 @@ def template_viewer_factory(config):
 
         response = BaseResponse(mimetype=mimetype or 'text/plain')
         response.data = template.render(config=config, environ=environ)
+        response.headers['Pragma'] = 'no-cache'
+        response.headers['Cache-Control'] = 'no-cache, must-revalidate'
+        response.headers['Expires'] = 'Sun, 13 Aug 1995 13:00:00 GMT'
         return response
     return template_viewer
 
