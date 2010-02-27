@@ -6,9 +6,13 @@ from ConfigParser import ConfigParser
 from StringIO import StringIO
 import jinja2
 from werkzeug.exceptions import abort, HTTPException, NotFound
-from werkzeug.utils import (append_slash_redirect, create_environ, responder,
-                            SharedDataMiddleware)
-from werkzeug.wrappers import BaseResponse
+from werkzeug import (
+    BaseResponse,
+    SharedDataMiddleware,
+    append_slash_redirect,
+    create_environ,
+    responder,
+    )
 
 
 config_names = os.environ.get('BLATTER_CONFIG', 'blatter.ini, local.ini')
